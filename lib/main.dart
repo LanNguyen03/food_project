@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:food_project/profile.dart';
+import 'package:food_project/sendOTP.dart';
 import 'package:food_project/setPassword.dart';
-import 'package:food_project/verification.dart';
+import 'package:food_project/signup.dart';
 import 'package:food_project/welcome.dart';
 
 import 'anytime.dart';
@@ -25,7 +27,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:  setPassword(),
+      home:  login(),
     );
   }
 }

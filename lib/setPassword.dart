@@ -8,6 +8,7 @@ class setPassword extends StatefulWidget {
 }
 
 class _setPasswordState extends State<setPassword> {
+    bool _obscureText = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,12 +51,19 @@ class _setPasswordState extends State<setPassword> {
                       blurRadius: 1,
                     )
                   ]),
-              child: const TextField(
-                obscureText: true,
+              child: TextFormField(
+                obscureText: _obscureText,
                 keyboardType: TextInputType.visiblePassword,
                 decoration: InputDecoration(
                   border: InputBorder.none,
                   hintText: '    Enter Your Password',
+                  suffixIcon: GestureDetector(onTap: (){
+                    setState(() {
+                      _obscureText=!_obscureText;
+                    });
+                  },
+                  child: Icon(_obscureText ? Icons.visibility : Icons.visibility_off),
+                  )
                 ),
               ),
             ),
@@ -75,12 +83,19 @@ class _setPasswordState extends State<setPassword> {
                       blurRadius: 1,
                     )
                   ]),
-              child: const TextField(
-                obscureText: true,
+              child: TextFormField(
+                obscureText: _obscureText,
                 keyboardType: TextInputType.visiblePassword,
                 decoration: InputDecoration(
                   border: InputBorder.none,
                   hintText: '    Confirm Password',
+                  suffixIcon: GestureDetector(onTap: (){
+                    setState(() {
+                      _obscureText=!_obscureText;
+                    });
+                  },
+                  child: Icon(_obscureText ? Icons.visibility : Icons.visibility_off),
+                  )
                 ),
               ),
             ),

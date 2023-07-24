@@ -155,7 +155,7 @@ class _otpformState extends State<otpform> {
           const SizedBox(
             height: 30,
           ),
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text('Didn’t receive code?'),
