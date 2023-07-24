@@ -69,10 +69,13 @@ class _sendOTPState extends State<sendOTP> {
                       blurRadius: 1,
                     )
                   ]),
-              child: const TextField(
-                decoration: InputDecoration(
-                  border: InputBorder.none,
-                  hintText: '    Email or Phone Number',
+              child: const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 10.0),
+                child: TextField(
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                    hintText: 'Email or Phone Number',
+                  ),
                 ),
               ),
             ),

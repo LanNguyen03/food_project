@@ -52,10 +52,13 @@ class _profileState extends State<profile> {
                         blurRadius: 1,
                       )
                     ]),
-                child: const TextField(
-                  decoration: InputDecoration(
-                    border: InputBorder.none,
-                    hintText: '    Full Name',
+                child: const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 10.0),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      border: InputBorder.none,
+                      hintText: 'Full Name',
+                    ),
                   ),
                 ),
               ),
@@ -75,10 +78,13 @@ class _profileState extends State<profile> {
                         blurRadius: 1,
                       )
                     ]),
-                child: const TextField(
-                  decoration: InputDecoration(
-                    border: InputBorder.none,
-                    hintText: '    Your mobile number',
+                child: const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 10.0),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      border: InputBorder.none,
+                      hintText: 'Your mobile munber',
+                    ),
                   ),
                 ),
               ),
@@ -98,10 +104,13 @@ class _profileState extends State<profile> {
                         blurRadius: 1,
                       )
                     ]),
-                child: const TextField(
-                  decoration: InputDecoration(
-                    border: InputBorder.none,
-                    hintText: '    Email',
+                child: const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 10.0),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      border: InputBorder.none,
+                      hintText: 'Email',
+                    ),
                   ),
                 ),
               ),
@@ -121,10 +130,13 @@ class _profileState extends State<profile> {
                         blurRadius: 1,
                       )
                     ]),
-                child: const TextField(
-                  decoration: InputDecoration(
-                    border: InputBorder.none,
-                    hintText: '    Street',
+                child: const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 10.0),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      border: InputBorder.none,
+                      hintText: 'Street',
+                    ),
                   ),
                 ),
               ),
@@ -144,10 +156,13 @@ class _profileState extends State<profile> {
                         blurRadius: 1,
                       )
                     ]),
-                child: const TextField(
-                  decoration: InputDecoration(
-                    border: InputBorder.none,
-                    hintText: '    City',
+                child: const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 10.0),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      border: InputBorder.none,
+                      hintText: 'City',
+                    ),
                   ),
                 ),
               ),
@@ -167,10 +182,13 @@ class _profileState extends State<profile> {
                         blurRadius: 1,
                       )
                     ]),
-                child: const TextField(
-                  decoration: InputDecoration(
-                    border: InputBorder.none,
-                    hintText: '    District',
+                child: const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 10.0),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      border: InputBorder.none,
+                      hintText: 'District',
+                    ),
                   ),
                 ),
               ),

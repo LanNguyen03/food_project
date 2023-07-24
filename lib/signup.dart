@@ -71,10 +71,13 @@ class _signupState extends State<signup> {
                       blurRadius: 1,
                     )
                   ]),
-              child: const TextField(
-                decoration: InputDecoration(
-                  border: InputBorder.none,
-                  hintText: '    Email or Phone Number',
+              child: const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 10.0),
+                child: TextField(
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                    hintText: 'Email or Phone Number',
+                  ),
                 ),
               ),
             ),
@@ -94,19 +97,22 @@ class _signupState extends State<signup> {
                       blurRadius: 1,
                     )
                   ]),
-              child: TextFormField(
-                obscureText: _obscureText,
-                keyboardType: TextInputType.visiblePassword,
-                decoration: InputDecoration(
-                  border: InputBorder.none,
-                  hintText: '    Enter Your Password',
-                  suffixIcon: GestureDetector(onTap: (){
-                    setState(() {
-                      _obscureText=!_obscureText;
-                    });
-                  },
-                  child: Icon(_obscureText ? Icons.visibility : Icons.visibility_off),
-                  )
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                child: TextFormField(
+                  obscureText: _obscureText,
+                  keyboardType: TextInputType.visiblePassword,
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                    hintText: 'Enter Your Password',
+                    suffixIcon: GestureDetector(onTap: (){
+                      setState(() {
+                        _obscureText=!_obscureText;
+                      });
+                    },
+                    child: Icon(_obscureText ? Icons.visibility : Icons.visibility_off),
+                    )
+                  ),
                 ),
               ),
             ),
@@ -155,9 +161,12 @@ class _signupState extends State<signup> {
           const SizedBox(
             height: 20,
           ),
-          const Text(
-            '--------------------------------------------------------or---------------------------------------------------------',
-            style: TextStyle(color: Colors.grey),
+          Container(
+            alignment: Alignment.center,
+            child: const Text(
+              '--------------------------or--------------------------',
+              style: TextStyle(color: Colors.grey),
+            ),
           ),
           const SizedBox(
             height: 30,
