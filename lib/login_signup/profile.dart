@@ -10,29 +10,9 @@ class profile extends StatefulWidget {
 class _profileState extends State<profile> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-          leading: InkWell(
-            onTap: () => print('back'),
-            child: const Text(
-              '< Back',
-              style: TextStyle(color: Colors.black),
-            ),
-          ),
-          centerTitle: true,
-          title: const Text(
-            'Profile',
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-            ),
-          )),
-      body: SafeArea(
-        child: Column(
-          children: [
-            const SizedBox(
-              height: 20,
-            ),
-            Padding(
+
+    Widget buildFullName(){
+      return Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15.0),
               child: Container(
                 decoration: BoxDecoration(
@@ -54,11 +34,10 @@ class _profileState extends State<profile> {
                   ),
                 ),
               ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            Padding(
+            );
+    }
+    Widget buildNumber(){
+      return Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15.0),
               child: Container(
                 decoration: BoxDecoration(
@@ -80,11 +59,10 @@ class _profileState extends State<profile> {
                   ),
                 ),
               ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            Padding(
+            );
+    }
+    Widget buildEmail(){
+      return Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15.0),
               child: Container(
                 decoration: BoxDecoration(
@@ -106,11 +84,10 @@ class _profileState extends State<profile> {
                   ),
                 ),
               ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            Padding(
+            );
+    }
+    Widget buildStreet(){
+      return Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15.0),
               child: Container(
                 decoration: BoxDecoration(
@@ -132,11 +109,10 @@ class _profileState extends State<profile> {
                   ),
                 ),
               ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            Padding(
+            );
+    }
+    Widget buildCity(){
+      return Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15.0),
               child: Container(
                 decoration: BoxDecoration(
@@ -158,11 +134,10 @@ class _profileState extends State<profile> {
                   ),
                 ),
               ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            Padding(
+            );
+    }
+    Widget buildDistrict(){
+      return Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15.0),
               child: Container(
                 decoration: BoxDecoration(
@@ -184,17 +159,16 @@ class _profileState extends State<profile> {
                   ),
                 ),
               ),
-            ),
-            const SizedBox(
-              height: 30,
-            ),
-            Row(
+            );
+    }
+    Widget buildSave(){
+      return Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 InkWell(
                   onTap: () => print('Cancel'),
                   child: Container(
-                    padding: const EdgeInsets.all(20),
+                    padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
                     alignment: Alignment.bottomCenter,
                     decoration: BoxDecoration(
                         color: Colors.white,
@@ -218,7 +192,7 @@ class _profileState extends State<profile> {
                 InkWell(
                   onTap: () => print('Save'),
                   child: Container(
-                    padding: const EdgeInsets.all(20),
+                    padding: const EdgeInsets.symmetric(horizontal: 60, vertical: 20),
                     alignment: Alignment.bottomCenter,
                     decoration: BoxDecoration(
                         color: const Color.fromARGB(255, 32, 146, 36),
@@ -239,7 +213,56 @@ class _profileState extends State<profile> {
                   ),
                 ),
               ],
+            );
+    }
+
+    return Scaffold(
+      appBar: AppBar(
+          leading: InkWell(
+            onTap: () => print('back'),
+            child: const Text(
+              '< Back',
+              style: TextStyle(color: Colors.black,fontSize: 15),
             ),
+          ),
+          centerTitle: true,
+          title: const Text(
+            'Profile',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+            ),
+          )),
+      body: SafeArea(
+        child: Column(
+          children: [
+            const SizedBox(
+              height: 20,
+            ),
+            buildFullName(),
+            const SizedBox(
+              height: 20,
+            ),
+            buildNumber(),
+            const SizedBox(
+              height: 20,
+            ),
+            buildEmail(),
+            const SizedBox(
+              height: 20,
+            ),
+            buildStreet(),
+            const SizedBox(
+              height: 20,
+            ),
+            buildCity(),
+            const SizedBox(
+              height: 20,
+            ),
+            buildDistrict(),
+            const SizedBox(
+              height: 30,
+            ),
+            buildSave(),
           ],
         ),
       ),

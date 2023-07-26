@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:food_project/profile.dart';
+import 'package:food_project/login_signup/profile.dart';
 import 'package:food_project/veryfi_OTP/sendOTP.dart';
-import 'package:food_project/setPassword.dart';
-import 'package:food_project/signup.dart';
-import 'package:food_project/welcome.dart';
+import 'package:food_project/password/setPassword.dart';
+import 'package:food_project/login_signup/signup.dart';
+import 'package:food_project/page/welcome.dart';
 
-import 'anytime.dart';
-import 'bookyourcar.dart';
-import 'login.dart';
-import 'otpform.dart';
+import 'page/anytime.dart';
+import 'page/bookyourcar.dart';
+import 'login_signup/login.dart';
+import 'veryfi_OTP/otpform.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: profile(),
+      home: const otpform(),
     );
   }
 }
