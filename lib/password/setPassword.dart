@@ -33,7 +33,14 @@ class _SetPasswordState extends State<SetPassword> {
     }
 
     Widget buildEnterPassword() {
-      return const TextFormFieldWidget(hintText: 'Enter Your Password');
+      return TextFormFieldWidget(
+        hintText: 'Enter Your Password',
+        onTap: () {
+          _obscureText = !_obscureText;
+          setState(() {});
+        },
+        obscureText: _obscureText,
+      );
     }
 
     Widget buildConfirmPassword() {
