@@ -13,81 +13,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     Widget buildFullName() {
-      return Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 20),
-        child: Container(
-          decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(10),
-              boxShadow: const [
-                BoxShadow(
-                  color: Colors.grey,
-                  blurRadius: 1,
-                )
-              ]),
-          child: const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 10.0),
-            child: TextField(
-              decoration: InputDecoration(
-                border: InputBorder.none,
-                hintText: 'Full Name',
-              ),
-            ),
-          ),
-        ),
-      );
+      return const TextFormFiledWidget(hintText: 'Full Name');
     }
 
     Widget buildNumber() {
-      return Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 15.0),
-        child: Container(
-          decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(10),
-              boxShadow: const [
-                BoxShadow(
-                  color: Colors.grey,
-                  blurRadius: 1,
-                )
-              ]),
-          child: const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 10.0),
-            child: TextField(
-              decoration: InputDecoration(
-                border: InputBorder.none,
-                hintText: 'Your mobile munber',
-              ),
-            ),
-          ),
-        ),
-      );
+      return const TextFormFiledWidget(hintText: 'Your mobile munber');
     }
 
     Widget buildEmail() {
-      return Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 15.0),
-        child: Container(
-          decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(10),
-              boxShadow: const [
-                BoxShadow(
-                  color: Colors.grey,
-                  blurRadius: 1,
-                )
-              ]),
-          child: const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 10.0),
-            child: TextField(
-              decoration: InputDecoration(
-                border: InputBorder.none,
-                hintText: 'Email',
-              ),
-            ),
-          ),
-        ),
-      );
+      return const TextFormFiledWidget(hintText: 'Email');
     }
 
     Widget buildStreet() {
@@ -99,35 +33,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
     }
 
     Widget buildDistrict() {
-      return Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 15.0),
-        child: Container(
-          decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(10),
-              boxShadow: const [
-                BoxShadow(
-                  color: Colors.grey,
-                  blurRadius: 1,
-                )
-              ]),
-          child: const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 10.0),
-            child: TextField(
-              decoration: InputDecoration(
-                border: InputBorder.none,
-                hintText: 'District',
-              ),
-            ),
-          ),
-        ),
-      );
+      return const TextFormFiledWidget(hintText: 'District');
     }
 
     Widget buildSave() {
       return SaveWidget(
         onSave: () {
-          print('save');
+          print('Save');
         },
       );
     }
@@ -153,25 +65,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
           children: [
             buildFullName(),
             buildNumber(),
-            const SizedBox(
-              height: 20,
-            ),
             buildEmail(),
-            const SizedBox(
-              height: 20,
-            ),
             buildStreet(),
-            const SizedBox(
-              height: 20,
-            ),
             buildCity(),
-            const SizedBox(
-              height: 20,
-            ),
             buildDistrict(),
-            const SizedBox(
-              height: 30,
-            ),
             buildSave(),
           ],
         ),

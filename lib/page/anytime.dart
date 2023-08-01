@@ -1,15 +1,47 @@
 import 'package:flutter/material.dart';
 
-class anytime extends StatefulWidget {
-  const anytime({super.key});
+class AnytimeScreen extends StatefulWidget {
+  const AnytimeScreen({super.key});
 
   @override
-  State<anytime> createState() => _anytimeState();
+  State<AnytimeScreen> createState() => _AnytimeScreenState();
 }
 
-class _anytimeState extends State<anytime> {
+class _AnytimeScreenState extends State<AnytimeScreen> {
   @override
   Widget build(BuildContext context) {
+    Widget buildSkip() {
+      return Container(
+        alignment: Alignment.bottomRight,
+        child: ElevatedButton(
+          onPressed: () => print("click skip"),
+          child: const Text(
+            'skip',
+            style: TextStyle(color: Colors.black),
+          ),
+        ),
+      );
+    }
+
+    Widget buildImage() {
+      return Column(
+        children: [Image.asset('assets/two.png')],
+      );
+    }
+
+    Widget buildLetterAnyTime() {
+      return Container(
+        alignment: Alignment.center,
+        child: const Text(
+          'At anytime',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 24,
+          ),
+        ),
+      );
+    }
+
     return Scaffold(
       body: SafeArea(
         child: Column(
@@ -17,39 +49,18 @@ class _anytimeState extends State<anytime> {
             Expanded(
               child: Column(
                 children: [
-                  Container(
-                    alignment: Alignment.bottomRight,
-                    child: ElevatedButton(
-                      onPressed: () => print("click skip"),
-                      child: Text(
-                        'skip',
-                        style: TextStyle(color: Colors.black),
-                      ),
-                    ),
-                    
-                  ),
-                  SizedBox(
+                  buildSkip(),
+                  const SizedBox(
                     height: 30,
                   ),
-                  Column(
-                    children: [Image.asset('assets/two.png')],
-                  ),
-                  SizedBox(
+                  buildImage(),
+                  const SizedBox(
                     height: 30,
                   ),
-                  Container(
-                    alignment: Alignment.center,
-                    child: Text(
-                      'At anytime',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 24,
-                      ),
-                    ),
-                  ),
-                  Text('Sell houses easily with the help of'),
-                  Text('Listenoryx and to make this line big'),
-                  Text('I am writing more.'),
+                  buildLetterAnyTime(),
+                  const Text('Sell houses easily with the help of'),
+                  const Text('Listenoryx and to make this line big'),
+                  const Text('I am writing more.'),
                 ],
               ),
             )

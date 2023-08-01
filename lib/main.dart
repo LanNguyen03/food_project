@@ -7,7 +7,7 @@ import 'package:food_project/page/welcome.dart';
 
 import 'page/anytime.dart';
 import 'page/bookyourcar.dart';
-import 'login/login.dart';
+import 'login/login_screen.dart';
 import 'veryfi_OTP/otpform.dart';
 
 void main() {
@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const otpform(),
+      home: const SetPassword(),
     );
   }
 }

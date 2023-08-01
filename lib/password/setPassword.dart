@@ -1,27 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:food_project/password/components/back_widget.dart';
 
-class setPassword extends StatefulWidget {
-  const setPassword({super.key});
+import 'components/text_form_filed_widget.dart';
+
+class SetPassword extends StatefulWidget {
+  const SetPassword({super.key});
 
   @override
-  State<setPassword> createState() => _setPasswordState();
+  State<SetPassword> createState() => _SetPasswordState();
 }
 
-class _setPasswordState extends State<setPassword> {
+class _SetPasswordState extends State<SetPassword> {
   bool _obscureText = true;
   @override
   Widget build(BuildContext context) {
     Widget buildBack() {
-      return Container(
-        alignment: Alignment.bottomLeft,
-        child: ElevatedButton(
-          onPressed: () => print('back'),
-          child: const Text(
-            '< Back',
-            style: TextStyle(color: Colors.black),
-          ),
-        ),
-      );
+      return BackWidget();
     }
 
     Widget buildLetterSet() {
@@ -39,39 +33,7 @@ class _setPasswordState extends State<setPassword> {
     }
 
     Widget buildEnterPassword() {
-      return Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 25.0),
-        child: Container(
-          decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(10),
-              boxShadow: const [
-                BoxShadow(
-                  color: Colors.grey,
-                  blurRadius: 1,
-                )
-              ]),
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10.0),
-            child: TextFormField(
-              obscureText: _obscureText,
-              keyboardType: TextInputType.visiblePassword,
-              decoration: InputDecoration(
-                  border: InputBorder.none,
-                  hintText: 'Enter Your Password',
-                  suffixIcon: GestureDetector(
-                    onTap: () {
-                      setState(() {
-                        _obscureText = !_obscureText;
-                      });
-                    },
-                    child: Icon(
-                        _obscureText ? Icons.visibility : Icons.visibility_off),
-                  )),
-            ),
-          ),
-        ),
-      );
+      return const TextFormFieldWidget(hintText: 'Enter Your Password');
     }
 
     Widget buildConfirmPassword() {
