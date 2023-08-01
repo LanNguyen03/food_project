@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:food_project/login_signup/profile.dart';
+import 'package:food_project/profile/profile_screen.dart';
 import 'package:food_project/veryfi_OTP/sendOTP.dart';
 import 'package:food_project/password/setPassword.dart';
-import 'package:food_project/login_signup/signup.dart';
+import 'package:food_project/sign_up/signup.dart';
 import 'package:food_project/page/welcome.dart';
 
 import 'page/anytime.dart';
 import 'page/bookyourcar.dart';
-import 'login_signup/login.dart';
+import 'login/login.dart';
 import 'veryfi_OTP/otpform.dart';
 
 void main() {
