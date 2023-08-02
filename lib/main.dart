@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_project/profile/profile_screen.dart';
-import 'package:food_project/veryfi_OTP/sendOTP.dart';
+import 'package:food_project/sendOTP/sendOTP.dart';
 import 'package:food_project/password/setPassword.dart';
 import 'package:food_project/sign_up/signup.dart';
 import 'package:food_project/page/welcome.dart';
@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const SetPassword(),
+      home: const OtpFormScreen(),
     );
   }
 }

@@ -1,27 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:food_project/login/components/back_widget.dart';
+import 'package:food_project/veryfi_OTP/components/verification_widget.dart';
+import 'package:food_project/veryfi_OTP/components/verify.dart';
 
-class otpform extends StatefulWidget {
-  const otpform({super.key});
+class OtpFormScreen extends StatefulWidget {
+  const OtpFormScreen({super.key});
 
   @override
-  State<otpform> createState() => _otpformState();
+  State<OtpFormScreen> createState() => _OtpFormScreenState();
 }
 
-class _otpformState extends State<otpform> {
+class _OtpFormScreenState extends State<OtpFormScreen> {
   @override
   Widget build(BuildContext context) {
     Widget buildBack() {
-      return Container(
-        alignment: Alignment.bottomLeft,
-        child: ElevatedButton(
-          onPressed: () => print('Back'),
-          child: const Text(
-            '< Back',
-            style: TextStyle(color: Colors.black),
-          ),
-        ),
-      );
+      return const BackWidget();
     }
 
     Widget buildPhoneVerification() {
@@ -39,118 +32,11 @@ class _otpformState extends State<otpform> {
     }
 
     Widget buildVerification() {
-      return Form(
-          child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          SizedBox(
-            height: 68,
-            width: 64,
-            child: TextField(
-              style: Theme.of(context).textTheme.headlineLarge,
-              keyboardType: TextInputType.number,
-              textAlign: TextAlign.center,
-              inputFormatters: [
-                LengthLimitingTextInputFormatter(1),
-                FilteringTextInputFormatter.digitsOnly
-              ],
-            ),
-          ),
-          const SizedBox(
-            width: 10,
-          ),
-          SizedBox(
-            height: 68,
-            width: 64,
-            child: TextField(
-              style: Theme.of(context).textTheme.headlineLarge,
-              keyboardType: TextInputType.number,
-              textAlign: TextAlign.center,
-              inputFormatters: [
-                LengthLimitingTextInputFormatter(1),
-                FilteringTextInputFormatter.digitsOnly
-              ],
-            ),
-          ),
-          const SizedBox(
-            width: 10,
-          ),
-          SizedBox(
-            height: 68,
-            width: 64,
-            child: TextField(
-              style: Theme.of(context).textTheme.headlineLarge,
-              keyboardType: TextInputType.number,
-              textAlign: TextAlign.center,
-              inputFormatters: [
-                LengthLimitingTextInputFormatter(1),
-                FilteringTextInputFormatter.digitsOnly
-              ],
-            ),
-          ),
-          const SizedBox(
-            width: 10,
-          ),
-          SizedBox(
-            height: 68,
-            width: 64,
-            child: TextField(
-              style: Theme.of(context).textTheme.headlineLarge,
-              keyboardType: TextInputType.number,
-              textAlign: TextAlign.center,
-              inputFormatters: [
-                LengthLimitingTextInputFormatter(1),
-                FilteringTextInputFormatter.digitsOnly
-              ],
-            ),
-          ),
-          const SizedBox(
-            width: 10,
-          ),
-          SizedBox(
-            height: 68,
-            width: 64,
-            child: TextField(
-              style: Theme.of(context).textTheme.headlineLarge,
-              keyboardType: TextInputType.number,
-              textAlign: TextAlign.center,
-              inputFormatters: [
-                LengthLimitingTextInputFormatter(1),
-                FilteringTextInputFormatter.digitsOnly,
-              ],
-            ),
-          ),
-        ],
-      ));
+      return const VerificationWidget();
     }
 
     Widget buildVerify() {
-      return InkWell(
-        onTap: () => print('Verify'),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 50.0),
-          child: Container(
-            padding: const EdgeInsets.symmetric(vertical: 15),
-            alignment: Alignment.bottomCenter,
-            decoration: BoxDecoration(
-                color: const Color.fromARGB(255, 32, 146, 36),
-                borderRadius: BorderRadius.circular(10),
-                boxShadow: const [
-                  BoxShadow(
-                    color: Colors.grey,
-                    blurRadius: 1,
-                  )
-                ]),
-            child: const Text(
-              'Verify',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 18,
-              ),
-            ),
-          ),
-        ),
-      );
+      return const VerifyWidget();
     }
 
     Widget buildEnd() {

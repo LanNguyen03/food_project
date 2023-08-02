@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class TextFormFiledWidget extends StatelessWidget {
-  const TextFormFiledWidget({super.key, this.hintText});
+class TextFormFieldWidget extends StatelessWidget {
+  const TextFormFieldWidget({super.key, this.hintText});
   final String? hintText;
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 15.0),
       child: Container(
         decoration: BoxDecoration(
             color: Colors.white,

@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:food_project/password/components/back_widget.dart';
+
+import '../profile/components/text_form_filed_widget.dart';
+import 'components/Signup_widget.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -13,16 +17,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     Widget buildBack() {
-      return Container(
-        alignment: Alignment.bottomLeft,
-        child: ElevatedButton(
-          onPressed: () => print('Back'),
-          child: const Text(
-            '< Back',
-            style: TextStyle(color: Colors.black),
-          ),
-        ),
-      );
+      return const BackWidget();
     }
 
     Widget buildlletter() {
@@ -42,107 +37,19 @@ class _LoginScreenState extends State<LoginScreen> {
     }
 
     Widget buildName() {
-      return Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 15.0),
-        child: Container(
-          decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(10),
-              boxShadow: const [
-                BoxShadow(
-                  color: Colors.grey,
-                  blurRadius: 1,
-                )
-              ]),
-          child: const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20.0),
-            child: TextField(
-              decoration: InputDecoration(
-                border: InputBorder.none,
-                hintText: 'Name',
-              ),
-            ),
-          ),
-        ),
-      );
+      return const TextFormFiledWidget(hintText: 'Name');
     }
 
     Widget buildEmail() {
-      return Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 15.0),
-        child: Container(
-          decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(10),
-              boxShadow: const [
-                BoxShadow(
-                  color: Colors.grey,
-                  blurRadius: 1,
-                )
-              ]),
-          child: const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20.0),
-            child: TextField(
-              decoration: InputDecoration(
-                border: InputBorder.none,
-                hintText: 'Email',
-              ),
-            ),
-          ),
-        ),
-      );
+      return const TextFormFiledWidget(hintText: 'Email');
     }
 
     Widget buildNumber() {
-      return Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 15.0),
-        child: Container(
-          decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(10),
-              boxShadow: const [
-                BoxShadow(
-                  color: Colors.grey,
-                  blurRadius: 1,
-                )
-              ]),
-          child: const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20.0),
-            child: TextField(
-              decoration: InputDecoration(
-                border: InputBorder.none,
-                hintText: 'Your mobile number',
-              ),
-            ),
-          ),
-        ),
-      );
+      return const TextFormFiledWidget(hintText: 'Your mobile number');
     }
 
     Widget buildGender() {
-      return Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 15.0),
-        child: Container(
-          decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(10),
-              boxShadow: const [
-                BoxShadow(
-                  color: Colors.grey,
-                  blurRadius: 1,
-                )
-              ]),
-          child: const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20.0),
-            child: TextField(
-              decoration: InputDecoration(
-                border: InputBorder.none,
-                hintText: 'Gender',
-              ),
-            ),
-          ),
-        ),
-      );
+      return const TextFormFiledWidget(hintText: 'Gender');
     }
 
     Widget buildDropDown() {
@@ -210,32 +117,7 @@ class _LoginScreenState extends State<LoginScreen> {
     }
 
     Widget buildSignup() {
-      return InkWell(
-        onTap: () => print('signup'),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 40.0),
-          child: Container(
-            padding: const EdgeInsets.symmetric(vertical: 20),
-            alignment: Alignment.bottomCenter,
-            decoration: BoxDecoration(
-                color: const Color.fromARGB(255, 32, 146, 36),
-                borderRadius: BorderRadius.circular(10),
-                boxShadow: const [
-                  BoxShadow(
-                    color: Colors.grey,
-                    blurRadius: 1,
-                  )
-                ]),
-            child: const Text(
-              'Sign Up',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 18,
-              ),
-            ),
-          ),
-        ),
-      );
+      return const SignupWidget();
     }
 
     Widget buildGmail() {
@@ -365,17 +247,11 @@ class _LoginScreenState extends State<LoginScreen> {
               height: 30,
             ),
             buildName(),
-            const SizedBox(
-              height: 30,
-            ),
+            
             buildEmail(),
-            const SizedBox(
-              height: 30,
-            ),
+            
             buildNumber(),
-            const SizedBox(
-              height: 30,
-            ),
+            
             buildGender(),
             buildDropDown(),
             const SizedBox(

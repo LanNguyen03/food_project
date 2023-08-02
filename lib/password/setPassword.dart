@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_project/password/components/Register_widget.dart';
 import 'package:food_project/password/components/back_widget.dart';
 
 import 'components/text_form_filed_widget.dart';
@@ -44,38 +45,13 @@ class _SetPasswordState extends State<SetPassword> {
     }
 
     Widget buildConfirmPassword() {
-      return Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 25.0),
-        child: Container(
-          decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(10),
-              boxShadow: const [
-                BoxShadow(
-                  color: Colors.grey,
-                  blurRadius: 1,
-                )
-              ]),
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10.0),
-            child: TextFormField(
-              obscureText: _obscureText,
-              keyboardType: TextInputType.visiblePassword,
-              decoration: InputDecoration(
-                  border: InputBorder.none,
-                  hintText: 'Confirm Password',
-                  suffixIcon: GestureDetector(
-                    onTap: () {
-                      setState(() {
-                        _obscureText = !_obscureText;
-                      });
-                    },
-                    child: Icon(
-                        _obscureText ? Icons.visibility : Icons.visibility_off),
-                  )),
-            ),
-          ),
-        ),
+      return TextFormFieldWidget(
+        hintText: 'Confirm Password',
+        onTap: () {
+          _obscureText = !_obscureText;
+          setState(() {});
+        },
+        obscureText: _obscureText,
       );
     }
 
@@ -92,32 +68,7 @@ class _SetPasswordState extends State<SetPassword> {
     }
 
     Widget buildRegister() {
-      return InkWell(
-        onTap: () => print('Register'),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 50.0, vertical: 20),
-          child: Container(
-            padding: const EdgeInsets.symmetric(vertical: 15),
-            alignment: Alignment.bottomCenter,
-            decoration: BoxDecoration(
-                color: const Color.fromARGB(255, 32, 146, 36),
-                borderRadius: BorderRadius.circular(10),
-                boxShadow: const [
-                  BoxShadow(
-                    color: Colors.grey,
-                    blurRadius: 1,
-                  )
-                ]),
-            child: const Text(
-              'Register',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 18,
-              ),
-            ),
-          ),
-        ),
-      );
+      return const RegisterWidget();
     }
 
     return Scaffold(
