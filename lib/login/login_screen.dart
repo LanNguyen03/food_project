@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:food_project/login/components/signup_with.dart';
+import 'package:food_project/login/components/signup_social.dart';
 import 'package:food_project/password/components/back_widget.dart';
 
 import '../profile/components/text_form_filed_widget.dart';
@@ -84,8 +84,9 @@ class _LoginScreenState extends State<LoginScreen> {
 
     Widget buildTick() {
       return Container(
-        alignment: Alignment.bottomLeft,
+        // alignment: Alignment.bottomLeft,
         child: const Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Icon(Icons.check),
             Text(
@@ -121,73 +122,22 @@ class _LoginScreenState extends State<LoginScreen> {
       return const SignupWidget();
     }
 
-    Widget buildGmail() {
-      return const SignupWith();
-    }
-
+    // Widget buildGmail() {
+    //   return const SignupWith(
+    //     image: 'assets/Apple.svg',
+    //   );
+    // }
     Widget buildFacebook() {
-      return Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 15.0),
-        child: InkWell(
-          onTap: () => print('Sign up with Facebook'),
-          child: Column(
-            children: [
-              SvgPicture.asset("assets/Facebook.svg"),
-              Container(
-                padding: const EdgeInsets.symmetric(vertical: 15),
-                alignment: Alignment.bottomCenter,
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(10),
-                    boxShadow: const [
-                      BoxShadow(
-                        color: Colors.grey,
-                        blurRadius: 1,
-                      )
-                    ]),
-                child: const Text(
-                  'Sign up with Facebook',
-                  style: TextStyle(
-                    fontSize: 18,
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ),
+      return const SignUpSocial(
+        image: "assets/Facebook.svg",
+        content: 'Sign up with Facebook',
       );
     }
 
     Widget buildApple() {
-      return Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 15.0),
-        child: InkWell(
-          onTap: () => print('Sign up with Apple'),
-          child: Column(
-            children: [
-              SvgPicture.asset("assets/Apple.svg"),
-              Container(
-                padding: const EdgeInsets.symmetric(vertical: 15),
-                alignment: Alignment.bottomCenter,
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(10),
-                    boxShadow: const [
-                      BoxShadow(
-                        color: Colors.grey,
-                        blurRadius: 1,
-                      )
-                    ]),
-                child: const Text(
-                  'Sign up with Apple',
-                  style: TextStyle(
-                    fontSize: 18,
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ),
+      return const SignUpSocial(
+        image: "assets/Apple.svg",
+        content: 'Sign up with Apple',
       );
     }
 
@@ -219,11 +169,8 @@ class _LoginScreenState extends State<LoginScreen> {
               height: 30,
             ),
             buildName(),
-            
             buildEmail(),
-            
             buildNumber(),
-            
             buildGender(),
             buildDropDown(),
             const SizedBox(
@@ -247,7 +194,7 @@ class _LoginScreenState extends State<LoginScreen> {
             const SizedBox(
               height: 30,
             ),
-            buildGmail(),
+            // buildGmail(),
             const SizedBox(
               height: 20,
             ),
