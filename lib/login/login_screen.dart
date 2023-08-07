@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:food_project/login/components/signup_with.dart';
 import 'package:food_project/password/components/back_widget.dart';
 
 import '../profile/components/text_form_filed_widget.dart';
@@ -121,36 +122,7 @@ class _LoginScreenState extends State<LoginScreen> {
     }
 
     Widget buildGmail() {
-      return Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 15.0),
-        child: InkWell(
-          onTap: () => print('Sign up with Gmail'),
-          child: Column(
-            children: [
-              SvgPicture.asset("assets/gmail.svg"),
-              Container(
-                padding: const EdgeInsets.symmetric(vertical: 15),
-                alignment: Alignment.bottomCenter,
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(10),
-                    boxShadow: const [
-                      BoxShadow(
-                        color: Colors.grey,
-                        blurRadius: 1,
-                      )
-                    ]),
-                child: const Text(
-                  'Sign up with Gmail',
-                  style: TextStyle(
-                    fontSize: 18,
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ),
-      );
+      return const SignupWith();
     }
 
     Widget buildFacebook() {
