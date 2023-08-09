@@ -83,10 +83,8 @@ class _LoginScreenState extends State<LoginScreen> {
     }
 
     Widget buildTick() {
-      return Container(
-        // alignment: Alignment.bottomLeft,
-        child: const Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+      return const Flexible(
+        child:  Row(
           children: [
             Icon(Icons.check),
             Text(
@@ -122,11 +120,12 @@ class _LoginScreenState extends State<LoginScreen> {
       return const SignupWidget();
     }
 
-    // Widget buildGmail() {
-    //   return const SignupWith(
-    //     image: 'assets/Apple.svg',
-    //   );
-    // }
+    Widget buildGmail() {
+      return const SignUpSocial(
+        image: "assets/gmail.svg",
+        content: 'Sign up with Gmail',
+      );
+    }
     Widget buildFacebook() {
       return const SignUpSocial(
         image: "assets/Facebook.svg",
@@ -194,7 +193,7 @@ class _LoginScreenState extends State<LoginScreen> {
             const SizedBox(
               height: 30,
             ),
-            // buildGmail(),
+            buildGmail(),
             const SizedBox(
               height: 20,
             ),
