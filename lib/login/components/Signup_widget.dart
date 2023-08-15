@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_project/login/home_page.dart';
 
 class SignupWidget extends StatelessWidget {
   const SignupWidget({super.key,this.onSave});
@@ -7,7 +8,9 @@ class SignupWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-        onTap: () => print('signup'),
+        onTap: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
+        },
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 40.0),
           child: Container(

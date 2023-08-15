@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class signup extends StatefulWidget {
-  const signup({super.key});
+class SignupScreen extends StatefulWidget {
+  const SignupScreen({super.key});
 
   @override
-  State<signup> createState() => _signupState();
+  State<SignupScreen> createState() => _SignupScreenState();
 }
 
-class _signupState extends State<signup> {
+class _SignupScreenState extends State<SignupScreen> {
   bool _obscureText = true;
   @override
   Widget build(BuildContext context) {
