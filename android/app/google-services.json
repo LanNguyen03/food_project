@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1088112506631",
+    "project_id": "signin-2cb13",
+    "storage_bucket": "signin-2cb13.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1088112506631:android:758650c352608f0fa7b7a2",
+        "android_client_info": {
+          "package_name": "com.example.food_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1088112506631-1umklasv41p8e0rga5stlaul7a554nqr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDNh7fOq3jimZPCB8HAI8IAIvbadyWDsk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1088112506631-1umklasv41p8e0rga5stlaul7a554nqr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

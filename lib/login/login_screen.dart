@@ -154,61 +154,58 @@ class _LoginScreenState extends State<LoginScreen> {
     }
 
     return Scaffold(
-      body: SafeArea(
-          child: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            buildBack(),
-            const SizedBox(
-              height: 30,
+      body: ListView(
+        // crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          buildBack(),
+          const SizedBox(
+            height: 30,
+          ),
+          buildlletter(),
+          const SizedBox(
+            height: 30,
+          ),
+          buildName(),
+          buildEmail(),
+          buildNumber(),
+          buildGender(),
+          buildDropDown(),
+          const SizedBox(
+            height: 20,
+          ),
+          buildTick(),
+          const SizedBox(
+            height: 30,
+          ),
+          buildSignup(),
+          const SizedBox(
+            height: 20,
+          ),
+          Container(
+            alignment: Alignment.center,
+            child: const Text(
+              '-------------------------or-------------------------',
+              style: TextStyle(color: Colors.grey),
             ),
-            buildlletter(),
-            const SizedBox(
-              height: 30,
-            ),
-            buildName(),
-            buildEmail(),
-            buildNumber(),
-            buildGender(),
-            buildDropDown(),
-            const SizedBox(
-              height: 20,
-            ),
-            buildTick(),
-            const SizedBox(
-              height: 30,
-            ),
-            buildSignup(),
-            const SizedBox(
-              height: 20,
-            ),
-            Container(
-              alignment: Alignment.center,
-              child: const Text(
-                '-------------------------or-------------------------',
-                style: TextStyle(color: Colors.grey),
-              ),
-            ),
-            const SizedBox(
-              height: 30,
-            ),
-            buildGmail(),
-            const SizedBox(
-              height: 20,
-            ),
-            buildFacebook(),
-            const SizedBox(
-              height: 20,
-            ),
-            buildApple(),
-            const SizedBox(
-              height: 20,
-            ),
-            buildEnd(),
-          ],
-        ),
-      )),
+          ),
+          const SizedBox(
+            height: 30,
+          ),
+          buildGmail(),
+          const SizedBox(
+            height: 20,
+          ),
+          buildFacebook(),
+          const SizedBox(
+            height: 20,
+          ),
+          buildApple(),
+          const SizedBox(
+            height: 20,
+          ),
+          buildEnd(),
+        ],
+      ),
     );
   }
 }
